@@ -1,2 +1,2 @@
-# Skincare
-![Skincare](https://github.com/Edanriell/oldProjects-2/blob/master/AnimatedText/skincare.png?raw=true)
+# SchoolOfTraffic
+![SchoolOfTraffic](https://github.com/Edanriell/SchoolOfTraffic/blob/master/SchoolOfTraffic.png?raw=true)

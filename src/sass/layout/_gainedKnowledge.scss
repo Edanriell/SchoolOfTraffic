@@ -1,0 +1,79 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+.GainedKnowledge {
+    padding-bottom: 13rem;
+	&-Header {
+        position: relative;
+        @extend %decorativeStripes;
+	}
+}
+.SkillList {
+    height: 37.6rem;
+    position: relative;
+    &::before {
+        content: "";
+        top: 0;
+        left: -20rem;
+        position: absolute;
+        width: 154rem;
+        height: 37.6rem;
+        background: url("../images/bg-chart.png") center no-repeat;
+        background-size: 154rem 37.6rem;
+    }
+    &-Wrapper {
+        background-image: linear-gradient(180deg, #191d26 1.46%, #0c1019 1.46%, #0c1019 50%, #191d26 50%, #191d26 51.46%, #0c1019 51.46%, #0c1019 100%);
+        background-size: 190.00px 190.00px;
+        position: relative;
+        margin-top: 8rem;
+    }
+	&-Item {
+        color: var(--clr-neutral-400);
+        font-size: var(--fs-450);
+        &:nth-child(1) {
+            position: absolute;
+            top: 16rem;
+            left: 1.3rem;
+            width: 21rem;
+            &::before {
+                @include skillListItemNumber(1, 1rem, -2rem);
+            }
+        }
+        &:nth-child(2) {
+            position: absolute;
+            top: 6rem;
+            left: 32rem;
+            width: 21rem;
+            &::before {
+                @include skillListItemNumber(2, 1rem, -2rem);
+            }
+        }
+        &:nth-child(3) {
+            position: absolute;
+            top: 15rem;
+            left: 53rem;
+            width: 14rem;
+            &::before {
+                @include skillListItemNumber(3, 1rem, -2rem);
+            }
+        }
+        &:nth-child(4) {
+            position: absolute;
+            top: 4.5rem;
+            left: 78rem;
+            width: 15rem;
+            &::before {
+                @include skillListItemNumber(4, 1rem, -2rem);
+            }
+        }
+        &:nth-child(5) {
+            position: absolute;
+            top: 2rem;
+            left: 100rem;
+            width: 13rem;
+            &::before {
+                @include skillListItemNumber(5, 1rem, -2rem);
+            }
+        }
+	}
+}

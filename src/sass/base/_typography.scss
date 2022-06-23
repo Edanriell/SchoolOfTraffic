@@ -1,0 +1,16 @@
+.Header {
+    &_color_white {
+		font-size: var(--fs-800);
+        color: var(--clr-neutral-300);
+        display: block;
+        font-family: var(--ff-light);
+        text-shadow: none;
+    }
+    &_color_orange {
+        font-size: var(--fs-400);
+        color: var(--clr-accent-300);
+        text-transform: uppercase;
+        font-family: var(--ff-thin);
+        text-shadow: 0 0 10px var(--clr-accent-400);
+    }
+}

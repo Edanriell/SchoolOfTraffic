@@ -1,0 +1,16 @@
+@use "../abstracts/mixins" as *;
+
+.Header {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+    @include flex(center, flex-start, row);
+    &-Link {
+	    width: 10.09rem;
+	    height: 3rem;
+        flex: 0 0 10.09rem;
+    }
+    &-Image {
+	    width: 10.09rem;
+	    height: 3rem;
+    }
+}

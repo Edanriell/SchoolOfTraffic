@@ -1,0 +1,35 @@
+@use "../abstracts/mixins" as *;
+
+.Form {
+	padding-top: 4rem;
+	@include flex(center, center, column);
+	&-Field {
+		@include flex(center, center, row);
+		position: relative;
+		&:nth-child(1) {
+            margin-bottom: 2rem;
+        }
+		&:nth-child(2) {
+            margin-bottom: 1.4rem;
+        }
+	}
+	&-Input_type_text {
+		width: 57rem;
+		height: 5.5rem;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+		background-color: var(--clr-neutral-300);
+		font-size: var(--fs-700);
+		&::placeholder {
+			text-transform: lowercase;
+			font-family: var(--ff-light);
+			font-size: var(--fs-400);
+		}
+	}
+	&-CheckboxLabel {
+		margin-bottom: 3.5rem;
+	}
+	&-Input_type_checkbox {
+		margin-left: -14.5rem;
+	}
+}

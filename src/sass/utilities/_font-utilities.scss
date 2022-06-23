@@ -1,0 +1,9 @@
+@use "../abstracts/fonts" as *;
+
+:root {
+	@each $font-style, $font-family in $fonts {
+		@each $type, $name in $font-family {
+			--ff-#{$type}: #{$name};
+		}
+	}
+}

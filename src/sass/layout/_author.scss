@@ -1,0 +1,61 @@
+.Author {
+	display: grid;
+	grid-template-columns: 36.9rem 39rem;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		"image header"
+		"image aboutParagraph"
+		"image paragraph"
+		"image .";
+	justify-content: center;
+	column-gap: 7.5rem;
+	position: relative;
+	padding-bottom: 19rem;
+	background: rgb(255,255,255);
+	background: radial-gradient(circle, rgba(255,255,255,0.0984768907563025) 0%, rgba(12,16,25,1) 24%);
+	background-position: -40px -170px;
+	&::before {
+		content: "";
+		position: absolute;
+		height: 60rem;
+		width: 73.4rem;
+		outline: 3px solid var(--clr-accent-700);
+		z-index: 1;
+		top: -6rem;
+		left: 35rem;
+	}
+	&-Header {
+		grid-area: header;
+		position: relative;
+		margin-top: 8rem;
+		&::before {
+			content: "";
+			height: 0.2rem;
+			width: 40rem;
+			background-color: var(--clr-neutral-200);
+			position: absolute;
+			bottom: 0;
+			left: -20rem;
+		}
+	}
+	&-Image {
+		width: 36.9rem;
+		height: 47.6rem;
+		grid-area: image;
+		z-index: 2;
+	}
+	&-AboutParagraph {
+		grid-area: aboutParagraph;
+		margin-top: 1.5rem;
+		width: 22.5rem;
+		color: var(--clr-neutral-400);
+        font-size: var(--fs-400);
+	}
+	&-Paragraph {
+		grid-area: paragraph;
+		color: var(--clr-neutral-400);
+		width: 34rem;
+		margin-top: 4rem;
+        font-size: var(--fs-450);
+	}
+}

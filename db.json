@@ -1,0 +1,18 @@
+{
+  "orders": [
+    {
+      "customer-name": "TEST",
+      "customer-address": "TEST",
+      "customer-email": "sdf@ddsfds.sdfsdf",
+      "customer-phone": "+3711231512351235632",
+      "terms-and-conditions": "on",
+      "id": 1
+    },
+    {
+      "CustomerName": "test",
+      "CustomerEmail": "test2@tesft2.lf",
+      "CustomerAgreement": "on",
+      "id": 2
+    }
+  ]
+}

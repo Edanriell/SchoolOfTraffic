@@ -1,0 +1,25 @@
+.Promo {
+    position: relative;
+    padding-bottom: 20rem;
+    &-Header {
+        padding-top: 4rem;
+    }
+    &-SubHeader {
+        width: 57rem;
+    }
+    &-Image {
+        width: 85.9rem;
+        height: 75.7rem;
+        position: absolute;
+        top: -15rem;
+        right: -18rem;
+    }
+    &-Paragraph {
+        font-size: var(--fs-450);
+        text-align: left;
+        width: 36rem;
+        color: var(--clr-neutral-400);
+        margin-bottom: 6rem;
+        font-family: var(--ff-light);
+    }
+}

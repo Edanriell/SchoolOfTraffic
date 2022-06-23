@@ -1,0 +1,13 @@
+.Spinner {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	&-Image {
+		background: url("./../images/spinner.svg") no-repeat center;
+		width: 40px;
+		height: 40px;
+		display: inherit;
+	}
+}

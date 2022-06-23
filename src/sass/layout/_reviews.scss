@@ -1,0 +1,118 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+.Reviews {
+    padding-bottom: 24rem;
+    &-Header {
+        margin-bottom: 8rem;
+    }
+}
+.ReviewsSlider {
+    position: relative;
+    &-Content {
+        width: 104rem;
+    }
+    &-Wrapper {
+        position: relative;
+        z-index: 2;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    &-Slide {
+        width: 90rem;
+        padding-left: 9.5rem;
+        padding-right: 5rem;
+    }
+    &-NextReview {
+        position: absolute;
+        width: 4.8rem;
+        height: 4.8rem;
+        border: 3px solid var(--clr-accent-800);
+        cursor: pointer;
+        margin-left: 6rem;
+        background: svg-load("../images/angle-right-solid.svg", fill=#FFF) no-repeat center;
+        background-size: 1.3rem 2.1rem;
+        transition: background 0.3s var(--easing-function);
+        z-index: 4;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        &:hover {
+            background: svg-load("../images/angle-right-solid.svg", fill=#FFF) no-repeat center var(--clr-accent-800);
+            background-size: 1.3rem 2.1rem;
+        }
+    }
+    &-PreviousReview {
+        position: absolute;
+        width: 4.8rem;
+        height: 4.8rem;
+        border: 3px solid var(--clr-accent-800);
+        cursor: pointer;
+        margin-right: 8rem;
+        order: -1;
+        background: svg-load("../images/angle-left-solid.svg", fill=#FFF) no-repeat center;
+        background-size: 1.3rem 2.1rem;
+        transition: background 0.3s var(--easing-function);
+        z-index: 4;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        &:hover {
+            background: svg-load("../images/angle-left-solid.svg", fill=#FFF) no-repeat center var(--clr-accent-800);
+            background-size: 1.3rem 2.1rem;;
+        }
+    }
+}
+.Review {
+    display: grid;
+    grid-template-columns: 24rem auto auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "image name name"
+        "image comment comment"
+        "image city date"
+    ;
+    column-gap: 7rem;
+    &-AuthorImage {
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%;
+    }
+    &-AuthorImageWrapper {
+        position: relative;
+        grid-area: image;
+        &::before {
+            content: "";
+            width: 44.5rem;
+            height: 39rem;
+            background: url("../images/bg-form.png") center no-repeat;
+            background-size: 44.5rem 39rem;
+            position: absolute;
+            top: 50%;
+            left: 53.5%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &-AuthorName {
+        @extend %orangeText;
+    }
+    &-AuthorCommentary {
+        grid-area: comment;
+        color: var(--clr-neutral-400);
+        font-size: var(--fs-450);
+        width: 58rem;
+    }
+    &-AuthorCity {
+        grid-area: city;
+        @extend %orangeText;
+        text-transform: initial;
+        justify-self: self-start;
+        opacity: 60%;
+    }
+    &-Date {
+        grid-area: date;
+        @extend %orangeText;
+        justify-self: self-end;
+        opacity: 60%;
+    }
+}

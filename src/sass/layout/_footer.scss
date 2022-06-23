@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+.Footer {
+    background-color: var(--clr-secondary-400);
+    &-Content {
+        @include flex(center, flex-start, row);
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    &-Text {
+        font-size: var(--fs-400);
+        font-family: var(--ff-regular);
+    }
+    &-TextStyled {
+        @extend %orangeText;
+        text-shadow: none;
+        font-family: var(--ff-regular);
+    }
+}

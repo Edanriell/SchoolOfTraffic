@@ -1,0 +1,52 @@
+@use "../abstracts/mixins" as *;
+
+.Timer {
+    @include flex(center, center, row);
+    margin-top: 6rem;
+    &-Field {
+        @include flex(center, flex-start, column);
+        width: 12rem;
+        margin-right: 2rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:last-child div:nth-child(1)::after {
+            all: unset;
+        }
+        div:nth-child(1)::after {
+            content: ":";
+            color: var(--clr-neutral-300);
+            display: inline-block;
+            font-size: var(--fs-850);
+            position: absolute;
+            top: 0;
+            right: -1.6rem;
+            opacity: 10%;
+        }
+    }
+    &-InactiveField {
+        div:nth-child(1) {
+            opacity: 10% !important;
+        }
+        div:nth-child(1)::after {
+            opacity: 100% !important;
+        }
+    }
+    &-Number {
+        color: var(--clr-neutral-300);
+        font-size: var(--fs-850);
+        white-space: nowrap;
+        font-variant-numeric: lining-nums;
+        font-family: var(--ff-semiBold);
+        width: 12rem;
+        text-align: center;
+        border-bottom: 2px solid var(--clr-neutral-300);
+        position: relative
+    }
+    &-FieldName {
+        font-family: var(--ff-regular);
+        color: var(--clr-neutral-300);
+        margin-top: 2rem;
+        opacity: 60%;
+    }
+}

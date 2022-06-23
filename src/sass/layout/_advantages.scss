@@ -1,0 +1,76 @@
+@use "../abstracts/mixins" as *;
+
+.Advantages {
+	padding-top: 4rem;
+	padding-bottom: 19rem;
+	overflow: hidden;
+}
+.AdvantageList {
+	@include flex(flex-start, space-around, row);
+	&-Item {
+		width: 18rem;
+		text-transform: uppercase;
+		color: var(--clr-neutral-300);
+		font-family: var(--ff-light);
+        font-size: var(--fs-450);
+		span {
+			display: block;
+			text-transform: lowercase;
+			color: var(--clr-neutral-400);
+			margin-top: 0.2rem;
+			font-family: var(--clr-regular);
+            font-size: var(--fs-450);
+		}
+		&:nth-child(1)::before {
+			content: "";
+			width: 11.5rem;
+			height: 7.1rem;
+			background: url("../images/icon-1.png");
+			display: block;
+			margin-bottom: 3rem;
+		}
+		&:nth-child(2)::before {
+			content: "";
+			width: 6.8rem;
+			height: 6.1rem;
+			background: url("../images/icon-2.png");
+			display: block;
+			margin-bottom: 3rem;
+		}
+		&:nth-child(3)::before {
+			content: "";
+			width: 6.7rem;
+			height: 6.7rem;
+			background: url("../images/icon-3.png");
+			display: block;
+			margin-bottom: 2.5rem;
+		}
+		&:last-child > div::after {
+			content: "";
+			display: block;
+			height: 0.2rem;
+			width: 61.1%;
+			background-color: var(--clr-primary-400);
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform: translateY(-50%);
+		}
+	}
+	&-Content {
+		position: relative;
+		font-size: var(--fs-500);
+		&::before {
+			content: "";
+			display: block;
+			height: 0.2rem;
+			width: 61.1%;
+			background-color: var(--clr-primary-400);
+			position: absolute;
+			top: 50%;
+			right: 122%;
+			transform: translateY(-50%);
+			font-size: var(--fs-500);
+		}
+	}
+}

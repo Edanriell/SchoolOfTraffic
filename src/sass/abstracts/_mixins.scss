@@ -1,0 +1,23 @@
+@mixin container($width, $padding-left, $padding-right) {
+	width: $width;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	margin: 0 auto;
+}
+@mixin flex($align-items, $justify-content, $flex-direction) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+}
+@mixin skillListItemNumber($number, $top, $left) {
+	content: "#{$number}";
+	color: var(--clr-neutral-200);
+	position: absolute;
+	top: $top;
+	left: $left;
+	font-family: var(--ff-bold);
+	font-size: var(--fs-900);
+	line-height: 0;
+	z-index: 2;
+}

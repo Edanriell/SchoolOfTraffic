@@ -1,0 +1,43 @@
+.SpecialOffer {
+    position: relative;
+    padding-bottom: 8rem;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -14rem;
+        left: 50%;
+        background: url("../images/bg-form.png") center no-repeat;
+        width: 89.6rem;
+        height: 78.2rem;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    &-Header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    &-Header span {
+        display: block;
+        text-align: center;
+    }
+    &-Text {
+        color: var(--clr-neutral-300);
+        font-family: var(--ff-regular);
+        text-align: center;
+        font-size: var(--fs-400);
+        padding-top: 4rem;
+        position: relative;
+        opacity: 60%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20rem;
+            height: 0.2rem;
+            background: var(--clr-primary-500);
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    }
+}

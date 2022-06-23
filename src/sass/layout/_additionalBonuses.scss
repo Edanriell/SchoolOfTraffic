@@ -1,0 +1,48 @@
+@use "../abstracts/placeholders" as *;
+
+.AdditionalBonuses {
+	padding-bottom: 20rem;
+	&-Header {
+		position: relative;
+		width: 60rem;
+		@extend %decorativeStripes;
+	}
+	&-Information {
+		font-family: var(--ff-regular);
+		color: var(--color-neutral-300);
+		font-size: var(--fs-450);
+		opacity: 60%;
+		margin-top: 4rem;
+		display: block;
+		text-align: center;
+	}
+}
+.Table {
+	margin-top: 2rem;
+	&-HeadItem {
+		font-family: var(--ff-thin);
+		font-size: var(--fs-500);
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		text-align: left;
+	}
+	&-RowName {
+		width: 58.5rem;
+	}
+	&-CommonPrice {
+		width: 29.5rem;
+	}
+	&-SpecialOffer {
+		width: 26rem;
+	}
+	&-BodyItem {
+		font-family: var(--ff-regular);
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		font-size: var(--fs-500);
+		text-align: left;
+	}
+	&-Row {
+		border-bottom: 3px solid #191d26;
+	}
+}
